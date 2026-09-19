@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="fade" x1="0" x2="1">
+      <stop offset="0" stop-color="#002d31" stop-opacity=".96"/>
+      <stop offset=".5" stop-color="#002d31" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#002d31" stop-opacity=".98"/>
+    </linearGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#2aa66a" stroke-opacity=".18" stroke-width="1"/>
+    </pattern>
+    <g id="motif" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-13 12H13M-9 6H9M-5 0H5M-9-6H9M-13-12H13" stroke="#4ccf6a" stroke-width="2"/>
+      <path d="M0-18V18M-8-12L8 12M8-12L-8 12" stroke="#98d93e" stroke-width="1.5"/>
+    </g>
+    <g id="flower" fill="none" stroke="#b54ee8" stroke-width="2">
+      <path d="M0-15L5-5L15 0L5 5L0 15L-5 5L-15 0L-5-5Z"/>
+      <circle r="3" fill="#50b87a"/>
+    </g>
+    <g id="diamond" fill="#0576cf"><path d="M0-13L13 0L0 13L-13 0Z"/></g>
+  </defs>
+  <rect width="1600" height="900" fill="#002d31"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <g opacity=".9">
+    <g transform="translate(80 120)"><use href="#flower"/></g><g transform="translate(190 120)"><use href="#flower"/></g><g transform="translate(300 120)"><use href="#flower"/></g><g transform="translate(410 120)"><use href="#flower"/></g><g transform="translate(520 120)"><use href="#flower"/></g><g transform="translate(630 120)"><use href="#flower"/></g><g transform="translate(740 120)"><use href="#flower"/></g><g transform="translate(850 120)"><use href="#flower"/></g>
+    <g transform="translate(80 230)"><use href="#diamond"/></g><g transform="translate(190 230)"><use href="#diamond"/></g><g transform="translate(300 230)"><use href="#diamond"/></g><g transform="translate(410 230)"><use href="#diamond"/></g><g transform="translate(520 230)"><use href="#diamond"/></g><g transform="translate(630 230)"><use href="#diamond"/></g><g transform="translate(740 230)"><use href="#diamond"/></g><g transform="translate(850 230)"><use href="#diamond"/></g>
+    <g transform="translate(80 340)"><use href="#motif"/></g><g transform="translate(190 340)"><use href="#motif"/></g><g transform="translate(300 340)"><use href="#motif"/></g><g transform="translate(410 340)"><use href="#motif"/></g><g transform="translate(520 340)"><use href="#motif"/></g><g transform="translate(630 340)"><use href="#motif"/></g><g transform="translate(740 340)"><use href="#motif"/></g><g transform="translate(850 340)"><use href="#motif"/></g>
+    <g transform="translate(80 560)"><use href="#motif"/></g><g transform="translate(190 560)"><use href="#motif"/></g><g transform="translate(300 560)"><use href="#motif"/></g><g transform="translate(410 560)"><use href="#motif"/></g><g transform="translate(520 560)"><use href="#motif"/></g><g transform="translate(630 560)"><use href="#motif"/></g><g transform="translate(740 560)"><use href="#motif"/></g><g transform="translate(850 560)"><use href="#motif"/></g>
+    <g transform="translate(80 670)"><use href="#diamond"/></g><g transform="translate(190 670)"><use href="#diamond"/></g><g transform="translate(300 670)"><use href="#diamond"/></g><g transform="translate(410 670)"><use href="#diamond"/></g><g transform="translate(520 670)"><use href="#diamond"/></g><g transform="translate(630 670)"><use href="#diamond"/></g><g transform="translate(740 670)"><use href="#diamond"/></g><g transform="translate(850 670)"><use href="#diamond"/></g>
+  </g>
+  <rect width="1600" height="900" fill="url(#fade)"/>
+</svg>

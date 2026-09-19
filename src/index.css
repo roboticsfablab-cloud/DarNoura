@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    direction: rtl;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'IBM Plex Sans Arabic', 'Tajawal', sans-serif;
+    background-color: #002F32;
+    color: #FDFBF7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 800;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  height: 8px;
+  direction: ltr;
+  left: 0;
+  right: auto;
+  }
+  ::-webkit-scrollbar-track {
+    background: #003D1F;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #006C35;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2E8B65;
+  }
+
+  /* Focus visible for keyboard accessibility */
+  button:focus-visible,
+  a:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 3px solid #8CDD37;
+    outline-offset: 2px;
+  }
+
+  /* Remove default video controls styling */
+  video::-webkit-media-controls-panel {
+    display: none !important;
+  }
+  video::-webkit-media-controls-play-button,
+  video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-bold text-lg
+           bg-gradient-to-l from-snd-500 to-snd-400 text-white
+           shadow-lg shadow-snd-500/30
+           transition-all duration-300 ease-out
+           hover:shadow-xl hover:shadow-snd-500/40 hover:-translate-y-0.5
+           active:translate-y-0 active:scale-95
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0;
+  }
+
+  .btn-gold {
+    @apply relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-bold text-lg
+           bg-gradient-to-l from-gold-300 to-gold-400 text-snd-800
+           shadow-lg shadow-gold-500/20
+           transition-all duration-300 ease-out
+           hover:shadow-xl hover:shadow-gold-500/30 hover:-translate-y-0.5
+           active:translate-y-0 active:scale-95
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-medium
+           text-sand-100/80 border border-sand-100/20
+           transition-all duration-300 ease-out
+           hover:text-sand-50 hover:border-sand-100/40 hover:bg-white/5
+           active:scale-95;
+  }
+
+  .btn-danger {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-medium
+           text-red-200 border border-red-500/30 bg-red-500/10
+           transition-all duration-300 ease-out
+           hover:bg-red-500/20 hover:border-red-500/50
+           active:scale-95;
+  }
+
+  .glass-card {
+    @apply bg-snd-800/40 backdrop-blur-xl border border-snd-300/15 rounded-3xl;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #8CDD37 0%, #65C51D 30%, #DFFFB6 50%, #65C51D 70%, #8CDD37 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .text-gradient-green {
+    background: linear-gradient(135deg, #BDF5D0 0%, #35C96A 50%, #00A94F 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .decorative-pattern {
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(197, 165, 114, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 80% 20%, rgba(0, 108, 53, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 60% 80%, rgba(197, 165, 114, 0.06) 0%, transparent 40%);
+  }
+
+  .arabic-pattern-bg {
+    background-image: url('/snd96-pattern.svg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .snd-identity-bg {
+    background-color: #002d31;
+    background-image: linear-gradient(180deg, rgba(0, 45, 49, 0.32), rgba(0, 21, 24, 0.82)), url('/snd96-pattern.svg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@layer utilities {
+  .no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  .animate-delay-100 { animation-delay: 0.1s; }
+  .animate-delay-200 { animation-delay: 0.2s; }
+  .animate-delay-300 { animation-delay: 0.3s; }
+  .animate-delay-500 { animation-delay: 0.5s; }
+  .animate-delay-700 { animation-delay: 0.7s; }
+}
